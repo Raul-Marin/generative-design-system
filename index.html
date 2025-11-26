@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&family=Nunito:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&family=Nunito:wght@400;700&family=Space+Grotesk:wght@400;700&family=Comic+Neue:wght@400;700&display=swap"
         rel="stylesheet">
 </head>
 
@@ -36,6 +36,30 @@
                 <option value="corporate">Corporate</option>
             </select>
             <p class="hint">Affects: Color, Shape, Typography</p>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 1rem 0;">
+
+        <!-- Accessibility -->
+        <div class="control-group">
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="dyslexia-toggle">
+                <label for="dyslexia-toggle">Dyslexia Friendly</label>
+            </div>
+            <p class="hint">Font: Comic Neue, Spacing++</p>
+        </div>
+
+        <!-- Environment -->
+        <div class="control-group">
+            <label for="battery-input">Battery Level: <span id="battery-display">100</span>%</label>
+            <input type="range" id="battery-input" min="0" max="100" value="100">
+            <p class="hint">&lt; 20%: Power Saving Mode</p>
+        </div>
+
+        <div class="control-group">
+            <label for="light-input">Ambient Light: <span id="light-display">500</span> lux</label>
+            <input type="range" id="light-input" min="0" max="1000" value="500">
+            <p class="hint">Adapts Theme (Dark/Light)</p>
         </div>
 
         <div class="meta-info">
