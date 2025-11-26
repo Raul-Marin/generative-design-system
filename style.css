@@ -314,3 +314,57 @@ input:focus {
   animation: none !important;
   transition: none !important;
 }
+
+/* Token Viewer Sidebar */
+.token-viewer {
+  width: 280px;
+  background: #1e293b;
+  color: #f8fafc;
+  border-left: 1px solid #334155;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.875rem;
+  overflow-y: auto;
+}
+
+.token-viewer h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #38bdf8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.token-group h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 0.25rem;
+}
+
+.token-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-family: monospace;
+}
+
+.token-name {
+  color: #cbd5e1;
+}
+
+.token-value {
+  color: #a5f3fc;
+  text-align: right;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

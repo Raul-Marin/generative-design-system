@@ -112,6 +112,24 @@ function updateSystem() {
     } else {
         paramContrast.innerText = "Normal";
     }
+
+    updateTokenViewer();
+}
+
+function updateTokenViewer() {
+    const styles = getComputedStyle(root);
+
+    document.getElementById('token-primary').innerText = styles.getPropertyValue('--primary-color').trim();
+    document.getElementById('token-bg').innerText = styles.getPropertyValue('--bg-color').trim();
+
+    // Font family cleanup for display
+    let font = styles.getPropertyValue('--font-family').trim();
+    font = font.split(',')[0].replace(/['"]/g, '');
+    document.getElementById('token-font').innerText = font;
+
+    document.getElementById('token-size').innerText = styles.getPropertyValue('--font-size-base').trim();
+    document.getElementById('token-radius').innerText = styles.getPropertyValue('--border-radius').trim();
+    document.getElementById('token-spacing').innerText = styles.getPropertyValue('--spacing-unit').trim();
 }
 
 function getTheme(taste, isDark) {
